@@ -23,7 +23,6 @@ project
 │   ecosystem.config.js
 │   package.json
 │   README.md
-│   README.md
 ```
 
 ### 准备
