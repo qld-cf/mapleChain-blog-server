@@ -68,7 +68,7 @@ $ pm2 start ecosystem.config.js
     views: { type: Number, default: 0 },
     likes: { type: Number, default: 0 },
     comments: { type: Number, default: 0 }
-  }, 
+  },
   createAt: { type: Date, default: Date.now },    // 创建时间
   updateAt: { type: Date },    // 更新时间
 })
@@ -77,7 +77,7 @@ $ pm2 start ecosystem.config.js
 #### 分类模型 
 ```
 {
-  name: { type: String, required: true, validate: /\S+/ },    // 分类名称 
+  name: { type: String, required: true, validate: /\S+/ },    // 分类名称
   description: String,    // 描述
   super: { type: Schema.Types.ObjectId, ref: 'Category' },    // 父分类
   createAt: { type: Date, default: Date.now },    // 创建时间
@@ -164,7 +164,7 @@ $ pm2 start ecosystem.config.js
     具体信息
   * data:
     具体数据
-    
+
 #### 接口列表
 ```
 .get('/', (ctx) => {
@@ -192,7 +192,7 @@ $ pm2 start ecosystem.config.js
   .get('/tag/:id', Tag.get)    // 获取单个标签信息
   .put('/tag/:id', middleware.verifyToken, Tag.modify)    // 更新单个标签信息
   .delete('/tag/:id', middleware.verifyToken, Tag.delete)    // 删除单个标签
-  
+
   .post('/article', middleware.verifyToken, Article.create)    // 新建文章
   .get('/article', Article.list)    // 获取文章列表
   .patch('/article', middleware.verifyToken, Article.patch)    // 批量更新文章
@@ -200,7 +200,7 @@ $ pm2 start ecosystem.config.js
   .get('/article/:id', Article.get)    // 获取单个文章信息
   .put('/article/:id', middleware.verifyToken, Article.modify)    // 更新单个文章信息
   .delete('/article/:id', middleware.verifyToken, Article.delete)    // 删除单个文章
-  
+
   .post('/comment', Comment.create)    // 新建评论
   .get('/comment', Comment.list)    // 获取评论列表
   .patch('/comment', middleware.verifyToken, Comment.patch)    // 批量更新评论状态
