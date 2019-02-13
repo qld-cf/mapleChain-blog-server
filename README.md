@@ -6,21 +6,24 @@ A restful blog backend server based on [koa](https://github.com/koajs/koa) + [mo
 基于koa + mongoose的博客后端服务
 ```
 project
+└───bin 初始化运行
+│   │   run
+│   │   www
+└───config 环境配置
+    │   env.js
+└───controllers 控制器
+└───db 数据库管理模块
+│   │   mongodb.js
+│   │   redis.js
+└───middlewares 中间件
+└───models 数据模型
+└───routes 路由
+└───utils 工具库
+│   app.js
+│   ecosystem.config.js
+│   package.json
 │   README.md
-│   file001.txt    
-│
-└───folder1
-│   │   file011.txt
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
+│   README.md
 ```
 
 ### 准备
